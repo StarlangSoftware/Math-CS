@@ -1,0 +1,12 @@
+bin/
+obj/
+/packages/
+/.idea/.idea.Math/.idea/contentModel.xml
+/.idea/.idea.Math/.idea/indexLayout.xml
+/Math.csproj
+/Math.sln
+/.idea/.idea.Math/.idea/modules.xml
+/.idea/.idea.Math/.idea/projectSettingsUpdater.xml
+/.idea/.idea.Math/riderModule.iml
+/.idea/.idea.Math/.idea/vcs.xml
+/.idea/.idea.Math/.idea/workspace.xml
