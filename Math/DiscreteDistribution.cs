@@ -16,7 +16,7 @@ namespace Math
         {
             if (ContainsKey(item))
             {
-                Add(item, this[item] + 1);
+                this[item] = this[item] + 1;
             }
             else
             {
@@ -36,7 +36,7 @@ namespace Math
         {
             if (ContainsKey(item))
             {
-                Add(item, this[item] - 1);
+                this[item] = this[item] - 1;
                 if (this[item] == 0)
                 {
                     Remove(item);
@@ -57,7 +57,7 @@ namespace Math
             {
                 if (ContainsKey(entry))
                 {
-                    Add(entry, this[entry] + distribution[entry]);
+                    this[entry] = this[entry] + distribution[entry];
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace Math
             {
                 if (this[entry] - distribution[entry] != 0)
                 {
-                    Add(entry, this[entry] - distribution[entry]);
+                    this[entry] = this[entry] - distribution[entry];
                 }
                 else
                 {
@@ -222,10 +222,8 @@ namespace Math
             {
                 return this[item] / _sum;
             }
-            else
-            {
-                return 0.0;
-            }
+
+            return 0.0;
         }
 
         /**

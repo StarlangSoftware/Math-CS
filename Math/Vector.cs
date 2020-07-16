@@ -49,7 +49,7 @@ namespace Math
         {
             this._size = size;
             _values = new List<double>();
-            for (int i = 0; i < size; i++)
+            for (var i = 0; i < size; i++)
             {
                 _values.Add(0.0);
             }
@@ -138,6 +138,19 @@ namespace Math
             }
         }
 
+        /**
+         * <summary>The sumOfElements method sums up all elements in the vector.</summary>
+         *
+         * <returns> Sum of all elements in the vector.</returns>
+         */
+        public double SumOfElements() {
+            double total = 0;
+            for (var i = 0; i < _size; i++) {
+                total += _values[i];
+            }
+            return total;
+        }
+        
         /**
          * <summary>The maxIndex method gets the first item of values {@link ArrayList} as maximum item, then it loops through the indices
          * and if a greater value than the current maximum item comes, it updates the maximum item and returns the final
@@ -235,7 +248,7 @@ namespace Math
         public Vector Difference(Vector v)
         {
             var result = new double[v.Size()];
-            for (int i = 0; i < _size; i++)
+            for (var i = 0; i < _size; i++)
             {
                 result[i] = _values[i] - v._values[i];
             }
@@ -341,7 +354,7 @@ namespace Math
          */
         public void Multiply(double value)
         {
-            for (int i = 0; i < _size; i++)
+            for (var i = 0; i < _size; i++)
             {
                 _values[i] = _values[i] * value;
             }

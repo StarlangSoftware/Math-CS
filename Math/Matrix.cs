@@ -37,8 +37,9 @@ namespace Math
          * <param name="col">is used to create matrix.</param>
          * <param name="min">minimum value.</param>
          * <param name="max">maximum value.</param>
+         * <param name="random"> random function to set the random values in the matrix.</param>
          */
-        public Matrix(int row, int col, double min, double max)
+        public Matrix(int row, int col, double min, double max, Random random)
         {
             _values = new double[row][];
             for (var i = 0; i < row; i++)
@@ -48,12 +49,11 @@ namespace Math
 
             this._row = row;
             this._col = col;
-            var rand = new Random();
             for (var i = 0; i < row; i++)
             {
                 for (var j = 0; j < col; j++)
                 {
-                    _values[i][j] = min + (max - min) * rand.NextDouble();
+                    _values[i][j] = min + (max - min) * random.NextDouble();
                 }
             }
         }
