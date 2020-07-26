@@ -123,7 +123,7 @@ namespace Math
          */
         public void Remove(int pos)
         {
-            _values.Remove(pos);
+            _values.RemoveAt(pos);
             _size--;
         }
 

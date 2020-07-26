@@ -61,7 +61,7 @@ namespace Test
         public void TestRemove()
         {
             smallVector1.Remove(2);
-            Assert.AreEqual(5, smallVector1.GetValue(2), 0.0);
+            Assert.AreEqual(2, smallVector1.GetValue(0), 0.0);
             Assert.AreEqual(4, smallVector1.Size());
             smallVector1.Insert(2, 4);
         }
