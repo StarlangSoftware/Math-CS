@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Math
@@ -225,6 +226,18 @@ namespace Math
 
             return 0.0;
         }
+
+        public Dictionary<string, double> GetProbabilityDistribution()
+        {
+            var result = new Dictionary<string, double>();
+            foreach (var item in Keys)
+            {
+                result[item] = GetProbability(item);
+            }
+
+            return result;
+        }
+
 
         /**
          * <summary>The getProbabilityLaplaceSmoothing method takes an item as an input returns the smoothed value to which the specified
