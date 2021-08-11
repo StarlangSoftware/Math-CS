@@ -187,6 +187,51 @@ namespace Math
         }
 
         /**
+         * <summary>The tanh method loops through the values {@link ArrayList} and sets each ith item with tanh function
+         * </summary>
+         */
+        public void Tanh()
+        {
+            for (var i = 0; i < _size; i++)
+            {
+                _values[i] = System.Math.Tanh(_values[i]);
+            }
+        }
+
+        /**
+         * <summary>The relu method loops through the values {@link ArrayList} and sets each ith item with relu function
+         * </summary>
+         */
+        public void Relu()
+        {
+            for (var i = 0; i < _size; i++)
+            {
+                if (_values[i] < 0)
+                {
+                    _values[i] = 0.0;
+                }
+            }
+        }
+
+        /**
+         * <summary>The reluDerivative method loops through the values {@link ArrayList} and sets each ith item with
+         * the derivative of relu function.</summary>
+         */
+        public void ReluDerivative()
+        {
+            for (var i = 0; i < _size; i++)
+            {
+                if (_values[i] > 0)
+                {
+                    _values[i] = 1.0;
+                }
+                else
+                {
+                    _values[i] = 0.0;
+                }
+            }
+        }
+        /**
          * <summary>The skipVector method takes a mod and a value as inputs. It creates a new result Vector, and assigns given input value to i.
          * While i is less than the size, it adds the ith item of values {@link ArrayList} to the result and increments i by given mod input.</summary>
          *
