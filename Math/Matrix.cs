@@ -263,6 +263,20 @@ namespace Math
             }
         }
 
+        public Matrix Sum(Matrix m)
+        {
+            var result = new Matrix(_row, _col);
+            for (var i = 0; i < _row; i++)
+            {
+                for (var j = 0; j < _col; j++)
+                {
+                    result._values[i][j] = _values[i][j] + m._values[i][j];
+                }
+            }
+
+            return result;
+        }
+
         /**
          * <summary>The add method which takes a row number and a Vector as inputs. It sums up the corresponding values at the given row of
          * values {@link java.lang.reflect.Array} and given {@link Vector}. If the sizes of both Matrix and values
@@ -295,6 +309,20 @@ namespace Math
                     _values[i][j] -= m._values[i][j];
                 }
             }
+        }
+
+        public Matrix Difference(Matrix m)
+        {
+            var result = new Matrix(_row, _col);
+            for (var i = 0; i < _row; i++)
+            {
+                for (var j = 0; j < _col; j++)
+                {
+                    result._values[i][j] = _values[i][j] - m._values[i][j];
+                }
+            }
+
+            return result;
         }
 
         /**
