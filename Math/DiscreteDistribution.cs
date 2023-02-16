@@ -42,6 +42,7 @@ namespace Math
                 {
                     Remove(item);
                 }
+                _sum--;
             }
         }
 
