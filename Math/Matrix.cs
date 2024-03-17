@@ -799,10 +799,10 @@ namespace Math
             int iq, ip, i;
             var matrix1 = (Matrix) Clone();
             var v = new Matrix(_row, _row);
-            double[] d = new double[_row];
-            double[] b = new double[_row];
-            double[] z = new double[_row];
-            double EPS = 0.000000000000000001;
+            var d = new double[_row];
+            var b = new double[_row];
+            var z = new double[_row];
+            var eps = 0.000000000000000001;
             for (ip = 0; ip < _row; ip++)
             {
                 for (iq = 0; iq < _row; iq++)
@@ -840,7 +840,7 @@ namespace Math
                     for (iq = ip + 1; iq < _row; iq++)
                     {
                         var g = 100.0 * System.Math.Abs(matrix1._values[ip][iq]);
-                        if (i > 4 && g <= EPS * System.Math.Abs(d[ip]) && g <= EPS * System.Math.Abs(d[iq]))
+                        if (i > 4 && g <= eps * System.Math.Abs(d[ip]) && g <= eps * System.Math.Abs(d[iq]))
                         {
                             matrix1._values[ip][iq] = 0.0;
                         }
@@ -850,7 +850,7 @@ namespace Math
                             {
                                 var h = d[iq] - d[ip];
                                 double t;
-                                if (g <= EPS * System.Math.Abs(h))
+                                if (g <= eps * System.Math.Abs(h))
                                 {
                                     t = matrix1._values[ip][iq] / h;
                                 }
