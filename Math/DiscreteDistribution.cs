@@ -227,6 +227,10 @@ namespace Math
             return 0.0;
         }
 
+        /// <summary>
+        /// Returns the distribution as a probability distribution
+        /// </summary>
+        /// <returns>Probability distribution</returns>
         public Dictionary<string, double> GetProbabilityDistribution()
         {
             var result = new Dictionary<string, double>();

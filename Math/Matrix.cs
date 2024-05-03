@@ -263,6 +263,12 @@ namespace Math
             }
         }
 
+        /// <summary>
+        /// The add method takes a Matrix as an input and sums values array with the
+        /// corresponding items of given Matrix and returns as a new Matrix.
+        /// </summary>
+        /// <param name="m">Matrix to be added.</param>
+        /// <returns>Sum of current matrix and m.</returns>
         public Matrix Sum(Matrix m)
         {
             var result = new Matrix(_row, _col);
@@ -311,6 +317,12 @@ namespace Math
             }
         }
 
+        /// <summary>
+        /// The difference method takes a Matrix as an input and subtracts from values array the
+        /// corresponding items of given Matrix.
+        /// </summary>
+        /// <param name="m">Matrix type input.</param>
+        /// <returns>Difference between current matrix and m.</returns>
         public Matrix Difference(Matrix m)
         {
             var result = new Matrix(_row, _col);
